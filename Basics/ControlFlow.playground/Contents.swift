@@ -61,7 +61,7 @@ while a < 10 {
  
  } while condition
  */
-a = 0
+a = 20
 repeat {
     
     print("iOS")
@@ -77,9 +77,34 @@ repeat {
      statements
  }
  */
-a = 5
+
+/*
+ for item in collection {
+     statements
+ }
+ */
+
+var arrData = [["name" : "Sachin", "runs" : "10000"],["name" : "Virat", "runs" : "9000"]]
+
+for (index, player) in arrData.enumerated() {
+    
+    print("\(index + 1)) Name: \(player["name"]!)\nRuns: \(player["runs"]!)\n")
+}
+
+var myRange = 50..<100
+
+for (i, data) in myRange.enumerated() {
+    
+    if data % 2 == 0 {
+        print("\(i) - \(data)")
+    }
+}
+
+var range = 10..<50
+
+a = 3
 switch a {
-case 0..<5:
+case 0...5:
     print("One")
 case 2:
     print("Two")
